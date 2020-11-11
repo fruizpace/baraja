@@ -1,20 +1,6 @@
 import random
-
-'''
-palos = ['o', 'c', 'e', 'b']
-numeros = ['A', '2', '3','4','5','6','7','S','C','R']
-baraja = []
-for palo in palos: # primera iteración
-    for numero in numeros: # segunda iteración
-        baraja.append(numero+palo) # añade la concatenación a la lista vacía
-
-print(baraja)
-print(len(baraja))
-'''
 # FUNCIÓN 1: crear una baraja
-def crearBaraja():
-    palos = ['o', 'c', 'e', 'b']
-    numeros = ['A', '2', '3','4','5','6','7','S','C','R']
+def crearBaraja(palos, numeros):
     baraja = [] # lista vacía y lo ponemos como una variable local (si lo pusiéramos fuera de la función sería una variable global)
     
     for palo in palos: # primera iteración
@@ -22,8 +8,6 @@ def crearBaraja():
             baraja.append(numero+palo)
     return baraja    
 
-#miB = crearBaraja()
-#print(miB)
 
 # FUNCIÓN 2: intercambiar el contenido de dos string
 def intercambio(p1, p2):
@@ -32,7 +16,6 @@ def intercambio(p1, p2):
     p2 = aux
     return p1, p2
 
-#print(intercambio('Hola', 'Adios'))
 
 # FUNCIÓN 3: mezclar las cartas de una baraja (lista)
 def barajar(lista_de_naipes):
@@ -43,5 +26,3 @@ def barajar(lista_de_naipes):
         lista_de_naipes[nueva_pos] = lista_de_naipes[i]
         lista_de_naipes[i] = aux
     return lista_de_naipes
-
-#print(barajar(miB))
