@@ -22,3 +22,15 @@ def crearBaraja():
 
 #miB = crearBaraja()
 #print(miB)
+
+# intercambiar el contenido de dos string
+def intercambio(p1, p2):
+    aux = p1
+    p1 = p2
+    p2 = aux
+    return p1, p2
+
+#print(intercambio('Hola', 'Adios'))
+
+for i in range(len(lista_de_naipes)):
+    
