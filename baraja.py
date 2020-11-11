@@ -32,5 +32,11 @@ def intercambio(p1, p2):
 
 #print(intercambio('Hola', 'Adios'))
 
-for i in range(len(lista_de_naipes)):
-    
+def barajar(lista_de_naipes):
+    for i in range(len(lista_de_naipes)): # va por la posición de cada carta
+        nueva_pos = random.randrange(len(lista_posicion)) # similar a funcion randint
+        #intercambio de cartas, técnica del vaso vacío:
+        aux = lista_de_naipes[nueva_pos]
+        lista_de_naipes[nueva_pos] = lista_de_naipes[i]
+        lista_de_naipes[i] = aux
+    return lista_de_naipes

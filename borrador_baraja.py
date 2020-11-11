@@ -14,25 +14,16 @@ miB = crearBaraja()
 #print(miB)
 #print(miB[2])
 
-newBaraja = []
-#for item in range(0, 40):
 
-
-
-
-#print(miB[item])
-#print(newBaraja)
-while len(newBaraja) < len(miB):
-    item = random.randint(0, len(miB-1))
-    carta = miB[item]
+def barajando(miBaraja):
+    newBaraja = []
+    while len(newBaraja) < len(miBaraja):
+        item = random.randint(0, len(miBaraja)-1)
+        carta = miBaraja[item]
         if carta in newBaraja:
-            item = random.randint(1, 40)
+            item = random.randint(1, len(miBaraja)-1)
         else:
             newBaraja.append(carta)
+    return newBaraja
 
-
-print(newBaraja)
-
-# Using randrange() to generate numbers from 0-100
-print ("Random number from 0-100 is : ",end="")
-print (random.randrange(100))
+print(barajando(miB))
