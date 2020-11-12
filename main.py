@@ -15,9 +15,12 @@ import barajaC
 palos = ['o', 'c', 'e', 'b']
 numeros = ['A', '2', '3','4','5','6','7','S','C','R']
 
-miBaraja = barajaC.Baraja(palos, numeros) # creamos la clase
+miBaraja = barajaC.Baraja(palos, numeros) # creamos la clase Baraja que está en el módulo barajaC
 
-print(miBaraja.mazacote) # me da una baraja mezclada
+print(miBaraja.mazacote) # me da una baraja mezclada pq he llamado a la función barajar
 
-miBaraja.barajar() 
+miBaraja.barajar() # me da una baraja sin mezclar
 print(miBaraja.mazacote)
+
+# quiero el elemento 2 de miBaraja:
+miBaraja.mazacote[2] # como miBaraja es un objeto, para acceder al elemento 2 tengo que poner primero el atributo que contiene la cartas, o sea mazacote.
